@@ -1,0 +1,12 @@
+D:\projectTT\DemoRedisCache\Utils\bin\Debug\net6.0\Utils.deps.json
+D:\projectTT\DemoRedisCache\Utils\bin\Debug\net6.0\Utils.dll
+D:\projectTT\DemoRedisCache\Utils\bin\Debug\net6.0\Utils.pdb
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.csproj.AssemblyReference.cache
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.GeneratedMSBuildEditorConfig.editorconfig
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.AssemblyInfoInputs.cache
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.AssemblyInfo.cs
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.csproj.CoreCompileInputs.cache
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.dll
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\refint\Utils.dll
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\Utils.pdb
+D:\projectTT\DemoRedisCache\Utils\obj\Debug\net6.0\ref\Utils.dll
