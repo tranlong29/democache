@@ -8,7 +8,7 @@ namespace DemoRedisCache.Datas
         [Key]
         [Required]
         public string? MaLop { get; set; }
-        public string? MaKhoaHoc { get;}
+        public string? MaKhoaHoc { get; set; }
         public string? MaKhoa { get; set; }
         public string? MaCT { get; set; }
         public int soThuTu { get; set; }

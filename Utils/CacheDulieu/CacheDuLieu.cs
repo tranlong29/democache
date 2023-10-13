@@ -174,7 +174,7 @@ namespace SiUtils
             }
         }
 
-        public void RemoveKeys(params string[] Keys)
+        public void RemoveKey(params string[] Keys)
         {
             foreach (var _key in Keys)
             {
@@ -199,6 +199,21 @@ namespace SiUtils
             {
                 var server = ConnectionMultiplexer.GetServer(endpoint);
                 server.FlushAllDatabases();
+            }
+        }
+        public void RemoveKeys(string key)
+        {
+            string prefixToRemove = key;
+            List<string> cacheKeys = AllKeyAvalible().Split(new string[] { "<RedisKey>" }, StringSplitOptions.None).ToList();
+
+
+            foreach (var cacheKey in cacheKeys)
+            {
+                string cleanedCacheKey = cacheKey.Replace("</RedisKey>", "");
+                if (cacheKey.StartsWith(prefixToRemove))
+                {
+                    RemoveKey(cleanedCacheKey);
+                }
             }
         }
     }

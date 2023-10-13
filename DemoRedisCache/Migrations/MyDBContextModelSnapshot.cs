@@ -204,11 +204,8 @@ namespace DemoRedisCache.Migrations
 
             modelBuilder.Entity("DemoRedisCache.Datas.SinhVien", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("MaSV")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DiaChi")
                         .IsRequired()
@@ -227,7 +224,7 @@ namespace DemoRedisCache.Migrations
                     b.Property<DateTime>("NgaySinh")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("Id");
+                    b.HasKey("MaSV");
 
                     b.HasIndex("MaLop");
 
@@ -395,7 +392,7 @@ namespace DemoRedisCache.Migrations
                         .WithMany()
                         .HasForeignKey("MaMH");
 
-                    b.HasOne("DemoRedisCache.Datas.Khoa", "SinhVien")
+                    b.HasOne("DemoRedisCache.Datas.SinhVien", "SinhVien")
                         .WithMany()
                         .HasForeignKey("MaSv")
                         .OnDelete(DeleteBehavior.Cascade)

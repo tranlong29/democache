@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "LgXQKIFFJRjjOJxMt9GvbIpQzbOyFVY+1GM4gghmnz0=",
+  "Hash": "zbMQclYf4FJbBM6m90ZcxTNIY+69BEehrGNSCEkD1VE=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\projectTT\\DemoRedisCache\\DemoRedisCache\\DemoRedisCache.csproj",
+      "Version": 2,
+      "Source": "DemoRedisCache",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "UI\\wwwroot",

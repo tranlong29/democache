@@ -3,8 +3,22 @@
 @{
     ViewData["Title"] = "student Page";
 }
+<style>
+    
+    .formsreach{
+        width: 50%;
+        margin-left:20%;
+    }
+</style>
 
-<div class="text-center">
+
+
+<div class="container text-center">
+    <div class="input-group formsreach">
+        <input type="search" class="form-control rounded" id="searchInput" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary" id="searchButton">search</button>
+    </div>
+    
     <table class="table">
         <thead>
             <tr>
@@ -12,19 +26,45 @@
                 <th scope="col">Tên</th>
                 <th scope="col">Địa Chỉ</th>
                 <th scope="col">Ngày sinh</th>
+                <th scope="col">Mã Lớp</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tableBody">
             @foreach (var item in Model)
             {
                 
                 <tr>
-                    <th scope="row">@item.Id</th>
+                    <th scope="row">@item.MaSV</th>
                     <td>@item.Name</td>
                     <td>@item.DiaChi</td>
                     <td>@item.NgaySinh</td>
+                    <td>@item.MaLop</td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const tableBody = document.getElementById("tableBody");
+
+        searchButton.addEventListener("click", function () {
+            const keyword = searchInput.value;
+            // Thực hiện gọi hành động Index với từ khóa tìm kiếm
+            fetch(`/SinhVien/GetData?name=${keyword}`) // Thay ControllerName bằng tên của Controller của bạn
+                .then(response => response.text())
+                .then(data => {
+                    // Cập nhật nội dung của tbody bằng dữ liệu mới
+                    tableBody.innerHTML = '';
+                    // Cập nhật nội dung của tbody bằng dữ liệu mới
+                    tableBody.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error("Có lỗi xảy ra khi gửi yêu cầu Ajax.", error);
+                });
+        });
+    });
+</script>

@@ -6,8 +6,8 @@ namespace DemoRedisCache.Datas
     public class SinhVien
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        [Required]
+        public string? MaSV { get; set; }
         [Required]
         [StringLength(50)]
         public string? Name { get; set; }
